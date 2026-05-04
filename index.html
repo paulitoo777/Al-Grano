@@ -90,7 +90,7 @@
 
         .card:hover { transform: translateY(-5px); }
 
-        .card img { width: 100%; border-radius: 8px; height: 180px; object-fit: cover; }
+        .card img { width: 100%; border-radius: 8px; height: 250px; object-fit: cover; }
 
         .precio { color: var(--verde-arroz); font-size: 1.5rem; font-weight: bold; }
 
@@ -134,23 +134,31 @@
 
     <section class="hero">
         <h1>El Arroz de Calidad Superior</h1>
-        <p>Cosechado con amor, procesado con excelencia.</p>
+        <p>Cosechado con amor, procesado con excelencia en Guadalupe.</p>
         <button class="btn-comprar">Ver Catálogo</button>
     </section>
 
     <h2 style="text-align:center; margin-top:40px;" id="productos">Nuestras Variedades</h2>
     <section class="productos">
         <div class="card">
+            <!-- Imagen local para Arroz Integral -->
+            <img src="arroz-integral.png" alt="Arroz Integral Orgánico">
+            <h3>Arroz Integral Orgánico</h3>
+            <p class="precio">S/ 6.20 kg</p>
+            <button class="btn-comprar">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <!-- Imagen local para Arroz Premium -->
+            <img src="arroz-premium-superior.png" alt="Arroz Premium Superior">
+            <h3>Arroz Premium Superior</h3>
+            <p class="precio">S/ 5.80 kg</p>
+            <button class="btn-comprar">Añadir al Carrito</button>
+        </div>
+        <div class="card">
             <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=400&q=80" alt="Arroz Extra">
             <h3>Arroz Extra Suave</h3>
             <p class="precio">S/ 4.50 kg</p>
             <button class="btn-comprar">Añadir al Carrito</button>
-        </div>
-       <!-- Dentro de la tarjeta de arroz integral -->
-<img src="arroz-integral.png" alt="Arroz Integral">
-
-<!-- Dentro de la tarjeta de arroz premium -->
-<img src="arroz-premium-superior.png" alt="Arroz Premium">
         </div>
     </section>
 
@@ -171,7 +179,7 @@
             <i class="fab fa-cc-visa"></i>
             <i class="fab fa-cc-mastercard"></i>
             <i class="fab fa-cc-apple-pay"></i>
-            <i class="fas fa-money-bill-wave"></i> <!-- Efectivo/Yape -->
+            <i class="fas fa-money-bill-wave"></i>
         </div>
     </footer>
 
