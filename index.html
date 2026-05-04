@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Grano - El mejor arroz a tu mesa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --dorado: #D4AF37;
+            --verde-arroz: #2E7D32;
+            --blanco: #ffffff;
+            --oscuro: #212121;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: var(--blanco);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--verde-arroz);
+        }
+
+        .logo span { color: var(--dorado); }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--oscuro);
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .btn-comprar {
+            background-color: var(--verde-arroz);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-comprar:hover { background-color: var(--dorado); }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px 5%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card img { width: 100%; border-radius: 8px; height: 180px; object-fit: cover; }
+
+        .precio { color: var(--verde-arroz); font-size: 1.5rem; font-weight: bold; }
+
+        .registro {
+            background-color: #eee;
+            padding: 50px 5%;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+
+        footer {
+            background-color: var(--oscuro);
+            color: white;
+            padding: 30px 5%;
+            text-align: center;
+        }
+
+        .metodos-pago i { font-size: 2rem; margin: 10px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Al <span>Grano</span></div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#registro">Registro</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>El Arroz de Calidad Superior</h1>
+        <p>Cosechado con amor, procesado con excelencia.</p>
+        <button class="btn-comprar">Ver Catálogo</button>
+    </section>
+
+    <h2 style="text-align:center; margin-top:40px;" id="productos">Nuestras Variedades</h2>
+    <section class="productos">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=400&q=80" alt="Arroz Extra">
+            <h3>Arroz Extra Suave</h3>
+            <p class="precio">S/ 4.50 kg</p>
+            <button class="btn-comprar">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1590080874088-eec64895b423?auto=format&fit=crop&w=400&q=80" alt="Arroz Integral">
+            <h3>Arroz Integral Orgánico</h3>
+            <p class="precio">S/ 6.20 kg</p>
+            <button class="btn-comprar">Añadir al Carrito</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=400&q=80" alt="Arroz Premium">
+            <h3>Arroz Premium Superior</h3>
+            <p class="precio">S/ 5.80 kg</p>
+            <button class="btn-comprar">Añadir al Carrito</button>
+        </div>
+    </section>
+
+    <section class="registro" id="registro">
+        <h2>Únete a nuestra comunidad</h2>
+        <p>Regístrate para recibir ofertas exclusivas.</p>
+        <form>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <button type="submit" class="btn-comprar">Crear Cuenta</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Al Grano - Todos los derechos reservados.</p>
+        <div class="metodos-pago">
+            <p>Aceptamos:</p>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+            <i class="fas fa-money-bill-wave"></i> <!-- Efectivo/Yape -->
+        </div>
+    </footer>
+
+</body>
+</html>
